@@ -1,0 +1,215 @@
+:root {
+    --bg-color-primary: #2d2f33;
+    --bg-color-secondary: #25262a;
+    --text-color-primary: #ffffff;
+    --text-color-secondary: #949699;
+    --accent-color: #77c5ff;
+}
+
+body {
+    margin: 0 5%;
+    color: var(--text-color-primary);
+    font-family: Consolas, monaco, monospace;
+    background-color: var(--bg-color-primary);
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        margin: 0 10%;
+    }
+}
+
+#navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    padding: 10px 5%;
+    background-color: var(--bg-color-primary);
+}
+
+@media only screen and (min-width: 768px) {
+    #navbar {
+        width: 80%;
+        padding: 10px 10%;
+    }
+}
+
+.navbar-shadow {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+#navbar ul {
+    display: flex;
+    position: fixed;
+    top: -100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    transition: 0.3s;
+}
+
+@media only screen and (min-width: 768px) {
+    #navbar ul {
+        flex-direction: row;
+        position: unset;
+        top: unset;
+        background-color: unset;
+    }
+}
+
+#navbar ul.active {
+    top: 100px;
+    background-color: var(--bg-color-primary);
+}
+
+#navbar li {
+    background-color: var(--bg-color-primary);
+}
+
+#navbar a {
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    padding: 20px 16px;
+    color: var(--text-color-secondary);
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    color: var(--text-color-primary);
+}
+
+#navbar ul a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 26px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 40%;
+  position: absolute;
+  background: var(--accent-color);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 20%;
+}
+
+#navbar ul a:hover:after {
+  width: 60%;
+  left: 20%;
+}
+
+#navbar-home a {
+    height: 52px;
+    padding: 14px 16px;
+    color: var(--text-color-primary);
+    font-size: 200%;
+    line-height: 52px;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    margin-top: 26px;
+    margin-bottom: 15px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--text-color-secondary);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media only screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+@media only screen and (min-width: 768px) {
+    #content {
+        flex-direction: row;
+    }
+}
+
+#introduction {
+    width: 90%;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    #introduction {
+        width: 40%;
+        text-align: right;
+    }
+}
+
+#introduction h1 {
+    color: var(--text-color-primary);
+    text-decoration: underline var(--accent-color);
+    text-decoration-thickness: 2px;
+}
+
+#introduction h3 {
+    color: var(--text-color-secondary);
+}
+
+#introduction h2 a{
+    color: var(--accent-color);
+}
+
+#pfp {
+    width: 90%;
+}
+
+@media only screen and (min-width: 768px) {
+    #pfp {
+        width: 40%;
+    }
+}
+
+#pfp img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80vw;
+}
+
+@media only screen and (min-width: 768px) {
+    #pfp img {
+        float: left;
+    }
+}

@@ -1,16 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="takos.tech" />
-    <meta property="og:title" content="Takos Portfolio" />
-    <meta property="og:description" content="Developer">
-    <meta property="og:url" content="https://takos.tech/">
-    <meta name="theme-color" data-react-helmet="true" content="#20E0FF">
-    <meta charset="UTF-8" />
-    <title>Takos - Developer</title>
-  </head>
-  <body>
-    <h1 style="width: 100%;text-align: center;">Coming soon...</h1>
-  </body>
+    <head>
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="takos.tech" />
+        <meta property="og:title" content="Takos - Backend Developer" />
+        <meta property="og:description" content="Hi, I'm Takos, a backend developer from France. I'm currently freelancing for APIs, discord bots and more!">
+        <meta property="og:url" content="https://takos.tech/">
+        <meta name="theme-color" data-react-helmet="true" content="#77c5ff">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Takos - Developer</title>
+    </head>
+    <body>
+        <nav id="navbar">
+            <div id="navbar-home"><a href="/">Takos</a></div>
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <div id="content">
+            <div id="introduction">
+                <h1>Backend developer</h1>
+                <h3>
+                    Hi, I'm Takos, a backend developer from France. <br>
+                    I'm currently freelancing for APIs, discord bots and more!
+                </h3>
+                <h2><a href="">Hire me!</a></h2>
+            </div>
+            <div id="pfp">
+                <img src="pfp.png" alt="Profile picture" />
+            </div>
+        </div>
+        </div>
+        <script>
+            // add shadow to navbar on scroll
+            window.addEventListener("scroll", (e) => {
+                const navbar = document.querySelector("#navbar");
+                if (window.pageYOffset > 20) {
+                    navbar.classList.add("navbar-shadow");
+                } else {
+                    navbar.classList.remove("navbar-shadow");
+                }
+            });
+            // make nav menu active on click on the hambuger
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector("#navbar ul");
+
+            hamburger.addEventListener("click", mobileMenu);
+
+            function mobileMenu() {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            }
+        </script>
+    </body>
 </html>
