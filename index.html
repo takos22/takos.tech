@@ -15,13 +15,13 @@
     </head>
     <body>
         <nav id="navbar">
-            <div id="navbar-home"><a href="/">Takos</a></div>
-            <ul>
-                <li><a href="/about">About</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/contact">Contact</a></li>
+            <div id="navbar-home"><a href="#">Takos</a></div>
+            <ul id="navbar-menu">
+                <li><a id="about-link" href="#about">About</a></li>
+                <li><a id="projects-link" href="#projects">Projects</a></li>
+                <li><a id="contact-link" href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div id="navbar-hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -40,27 +40,16 @@
                 <img src="pfp.png" alt="Profile picture" />
             </div>
         </div>
+        <div id="about">
+
         </div>
-        <script>
-            // add shadow to navbar on scroll
-            window.addEventListener("scroll", (e) => {
-                const navbar = document.querySelector("#navbar");
-                if (window.pageYOffset > 20) {
-                    navbar.classList.add("navbar-shadow");
-                } else {
-                    navbar.classList.remove("navbar-shadow");
-                }
-            });
-            // make nav menu active on click on the hambuger
-            const hamburger = document.querySelector(".hamburger");
-            const navMenu = document.querySelector("#navbar ul");
+        <div id="projects">
 
-            hamburger.addEventListener("click", mobileMenu);
+        </div>
+        <div id="contact">
 
-            function mobileMenu() {
-                hamburger.classList.toggle("active");
-                navMenu.classList.toggle("active");
-            }
-        </script>
+        </div>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>
