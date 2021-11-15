@@ -196,11 +196,10 @@ body {
 
 section {
     text-align: center;
-    padding-top: 100px;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 100px 5%;
     width: 90%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 200px);
+    border-top: 2px solid var(--accent-color);
 }
 
 @media only screen and (min-width: 768px) {
@@ -234,6 +233,9 @@ section {
     flex-direction: column;
     margin-top: 100px;
     padding-top: 0;
+    padding-bottom: 0;
+    border-top: unset;
+    height: calc(100vh - 100px);
 }
 
 @media only screen and (min-width: 768px) {
@@ -264,8 +266,39 @@ section {
     color: var(--text-color-secondary);
 }
 
-#introduction-text h2 a {
+#introduction-text h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    #introduction-text h2 {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+#hire-link {
     color: var(--accent-color);
+    text-decoration: none;
+}
+
+#hire-link:after {
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    margin: 0 30%;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease 0s, margin 0.3s ease 0s;
+    width: 40%;
+}
+
+#hire-link:hover:after {
+    width: 80%;
+    margin: 0 10%;
 }
 
 #introduction-image {
